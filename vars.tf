@@ -21,3 +21,18 @@ variable "keypair" {
     path = "/Users/jasdil/Documents/Learnings/terraform/creds/aws/us-region-key-pair.pub"
     }
 }
+
+variable "github" {
+    type = map
+    default = {
+        token = "/Users/jasdil/Documents/Learnings/terraform/creds/github/github_token"
+        name = "terraform_repo"
+        visibility = "private"
+    }
+}
+
+variable "github_token" {
+  description = "GitHub Personal Access Token"
+  type = string
+  sensitive = true
+}
