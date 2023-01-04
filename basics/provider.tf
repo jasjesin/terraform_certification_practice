@@ -61,3 +61,9 @@ jasdil@JasDiLMacAir terraform_certification_practice % tree .terraform/providers
 
 9 directories, 5 files
 */
+
+resource "aws_key_pair" "ec2_keypair" {
+    key_name = var.keypair.name
+    public_key = "${file(var.keypair.path)}"
+}
+
